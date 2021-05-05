@@ -46,7 +46,7 @@ Also remember that developer will Delete Adult Contents from Database. So better
 [Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
 """
 	HOME_TEXT = """
-Hi,This is Permanent Files Store Bot.
+Hi,This is Permanent Files Storing Bot.
 
-Send Me links From My Channel to Open It.This Bot Made For My Personal Use. So don’t Sent Me Any Files Here. Otherwise You Will Get Ban ! 
+Send Me Any links From My Channel to Open It.This Bot Made For My Personal Use. So don’t Sent Me Any Files Here. Otherwise You Will Get Ban ! 
 """
