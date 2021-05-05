@@ -126,11 +126,11 @@ async def main(bot, message):
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
             await forwarded_msg.reply_text(
-                f"User id Name:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id})",
+                f"User id Name:[{message.from_user.first_name}](tg://user?id={message.from_user.id})",
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
-                f"**Successfully Link Generated. 🔗\n\nJust Click the button link to get your file!",
+                f"**Successfully Link Generated. 🔗\n\nClick On the Button to Get Your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("File Link", url=share_link)]]
