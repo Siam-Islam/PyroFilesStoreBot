@@ -94,12 +94,7 @@ async def start(bot, cmd):
             elif Config.FORWARD_AS_COPY is False:
                 send_stored_file = await bot.forward_messages(chat_id=cmd.from_user.id, from_chat_id=Config.DB_CHANNEL,
                                                               message_ids=file_id)
-            await send_stored_file_text(
-                f"**Sharable Link of this file:⬇️⬇️** https://t.me/{Config.BOT_USERNAME}?star=A4F_{file_id}\n\n__",
-                disable_web_page_preview=True, quote=True)
-                
-        except Exception as err:
-            await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
+            
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
