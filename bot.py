@@ -68,12 +68,9 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("Contact Me", url="https://t.me/linux_repo"),
+                        InlineKeyboardButton("Credits", url="https://t.me/Discovery_Updates")
+                    
                     ]
                 ]
             )
