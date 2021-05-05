@@ -94,8 +94,8 @@ async def start(bot, cmd):
             elif Config.FORWARD_AS_COPY is False:
                 send_stored_file = await bot.forward_messages(chat_id=cmd.from_user.id, from_chat_id=Config.DB_CHANNEL,
                                                               message_ids=file_id)
-            await send_stored_file.replay_text(
-                f"**✅ Video Generated Successfully ✅**\n__",
+            await send_stored_file.reply_text(
+                f"**✅ Video Generated Successfully ✅**\n\n__",
                 disable_web_page_preview=True, quote=True)
                 
         except Exception as err:
