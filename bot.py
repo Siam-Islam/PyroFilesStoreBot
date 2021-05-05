@@ -126,7 +126,7 @@ async def main(bot, message):
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
             await forwarded_msg.reply_text(
-                f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
+                f"User id Name:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id})",
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
