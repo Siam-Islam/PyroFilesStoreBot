@@ -99,7 +99,7 @@ async def start(bot, cmd):
                 disable_web_page_preview=True, quote=True)
                 
         except Exception as err:
-            await cmd.reply_text(f"**File Generated Successfully.✅**\n__")
+            await cmd.reply_text(f"**File Generated Successfully. ✅**\n__")
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
@@ -133,7 +133,7 @@ async def main(bot, message):
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
-                f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
+                f"**Here is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("Open Link", url=share_link)],
