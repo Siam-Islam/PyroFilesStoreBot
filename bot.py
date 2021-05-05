@@ -68,8 +68,8 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Contact Me", url="https://t.me/linux_repo"),
-                        InlineKeyboardButton("Credits", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Contact Me", url="https://t.me/Siamislam"),
+                        InlineKeyboardButton("Credits", url="https://t.me/AbirHasan2005")
                     
                     ]
                 ]
@@ -92,11 +92,11 @@ async def start(bot, cmd):
                 send_stored_file = await bot.forward_messages(chat_id=cmd.from_user.id, from_chat_id=Config.DB_CHANNEL,
                                                               message_ids=file_id)
             await message.reply_text(
-                f"**✅ Generated Successfully ✅**\n\n__",
+                f"**✅  Successfully ✅**\n\n__",
                 disable_web_page_preview=True, quote=True)
                 
         except Exception as err:
-            await cmd.reply_text(f"**File Generated Successfully. ✅**\n__")
+            await cmd.reply_text(f"**✅ Process Done Successfully. ✅**\n__")
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
@@ -130,7 +130,7 @@ async def main(bot, message):
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
-                f"**Here is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
+                f"**🔗 Successfully Link Generated. 🔗\n\nJust Click the button link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("File Link", url=share_link)]]
