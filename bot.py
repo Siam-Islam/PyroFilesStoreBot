@@ -96,7 +96,7 @@ async def start(bot, cmd):
                 disable_web_page_preview=True, quote=True)
                 
         except Exception as err:
-            await cmd.reply_text(f"**✅ Process Done Successfully. ✅**\n__")
+            await cmd.reply_text(f"**Process Done Successfully. ✅**\n__")
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
@@ -130,7 +130,7 @@ async def main(bot, message):
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
-                f"**🔗 Successfully Link Generated. 🔗\n\nJust Click the button link to get your file!",
+                f"**Successfully Link Generated. 🔗\n\nJust Click the button link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("File Link", url=share_link)]]
