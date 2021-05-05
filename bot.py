@@ -136,7 +136,8 @@ async def main(bot, message):
                 f"**Here is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    []
+                    [[InlineKeyboardButton("File Link", url=share_link)]]
+                     
                 ),
                 disable_web_page_preview=True
             )
