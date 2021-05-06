@@ -107,7 +107,7 @@ async def main(bot, message):
             await db.add_user(chat_id)
             await bot.send_message(
                 Config.LOG_CHANNEL,
-                f"#NEW_USER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{Config.BOT_USERNAME} !!"
+                f"New User: [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{Config.BOT_USERNAME} !!"
             )
         if Config.UPDATES_CHANNEL is not None:
             back = await handle_force_sub(bot, message)
@@ -116,7 +116,7 @@ async def main(bot, message):
             else:
                 pass
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/linux_repo)",
+            await message.reply_text("You are banned!",
                                      disable_web_page_preview=True)
             return
         if Config.OTHER_USERS_CAN_SAVE_FILE is False:
@@ -126,7 +126,7 @@ async def main(bot, message):
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
             await forwarded_msg.reply_text(
-                f"User id Name:[{message.from_user.first_name}](tg://user?id={message.from_user.id})",
+                f"File Owner Name: [{message.from_user.first_name}](tg://user?id={message.from_user.id})",
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
             await editable.edit(
