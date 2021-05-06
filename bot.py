@@ -53,7 +53,7 @@ async def start(bot, cmd):
             await db.add_user(chat_id)
             await bot.send_message(
                 Config.LOG_CHANNEL,
-                f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
+                f"New User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) Joined @{Config.BOT_USERNAME} !!"
             )
         if Config.UPDATES_CHANNEL is not None:
             back = await handle_force_sub(bot, cmd)
