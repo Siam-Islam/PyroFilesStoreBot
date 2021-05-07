@@ -21,7 +21,7 @@ async def foo(bot, cmd):
         await db.add_user(chat_id)
         await bot.send_message(
             Config.LOG_CHANNEL,
-            f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
+            f"New User: [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) Joined !"
         )
 
     ban_status = await db.get_ban_status(chat_id)
@@ -128,7 +128,7 @@ async def main(bot, message):
             await forwarded_msg.reply_text(
                 f"File Owner Name: [{message.from_user.first_name}](tg://user?id={message.from_user.id})",
                 parse_mode="Markdown", disable_web_page_preview=True)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=A4F_{file_er_id}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=download_{file_er_id}"
             await editable.edit(
                 f"**Successfully Link Generated. 🔗\n\nClick On the Button to Get Your file!",
                 parse_mode="Markdown",
