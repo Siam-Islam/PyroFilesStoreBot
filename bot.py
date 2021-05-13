@@ -131,7 +131,7 @@ async def main(bot, message):
                 f"**Successfully Link Generated. 🔗\n\nClick On the Button to Get Your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("File Link", url=share_link)]]
+                    [[InlineKeyboardButton("☯️ Shareable Link ☯️ ", url=share_link)]]
                      
                 ),
                 disable_web_page_preview=True
