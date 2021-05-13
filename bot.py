@@ -68,9 +68,8 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("", url="https://t.me/Siamislam"),
-                        InlineKeyboardButton("", url="https://t.me/AbirHasan2005")
-                    
+                        InlineKeyboardButton("Contact Me", url="https://t.me/Siamislam")
+                              
                     ]
                 ]
             )
