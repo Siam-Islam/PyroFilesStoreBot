@@ -37,16 +37,8 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 📢 **Updates Channel:** [Discovery Projects](https://t.me/Discovery_Updates)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** @AbirHasan2005
 
-Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
-
-Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
-
-[Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
 """
 	HOME_TEXT = """
-Hi,This is Permanent Files Storing Bot.
-
-Send Me Any links From My Channel to Open It.This Bot Made For My Personal Use. So don’t Sent Me Any Files Here. Otherwise You Will Get Ban ! 
+⚠️ No Links Found. Send Me Any Links From My Channel to Open it. ⚠️
 """
